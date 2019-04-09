@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Robert Ross</title>
+</head>
+<body>
+	<img src="eyes.png" id="eyes"/>
+	<img src="bob.png" onmousemove="move()"/>
+</body>
+
+<style>
+	img {
+		position: absolute;
+	}
+</style>
+
+<script>
+	var X = 0;
+  	var Y = 0;
+  	var eyes = document.getElementById("eyes");
+
+  	function move() {
+  		moveX();
+  		moveY();
+  	}
+
+  	function moveX() {
+  		eyes.style.left = (getMouseX(event) - 500) / 30 + "px";
+  	}
+
+
+  	function moveY() {
+  		eyes.style.top = (getMouseY(event) - 500) / 35 + "px";
+  	}
+
+    function getMouseX(e) {
+    	return e.clientX;
+    }
+
+    function getMouseY(e) {
+    	return e.clientY;
+    }
+</script>
+</html>
